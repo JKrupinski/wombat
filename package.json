@@ -19,12 +19,15 @@
   "scripts": {
     "lint": "eslint **/*.js",
     "build": "./bin/wombat.js build",
-    "dev": "./bin/wombat.js dev"
+    "dev": "./bin/wombat.js dev",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "fs-extra": "^7.0.1",
     "lodash": "^4.17.11",
-    "showdown": "^1.9.0"
+    "showdown": "^1.9.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "eslint": "^5.9.0"
@@ -35,5 +38,6 @@
   },
   "os": [
     "!win32"
-  ]
+  ],
+  "snyk": true
 }
