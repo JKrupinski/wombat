@@ -2,9 +2,13 @@
   "private": true,
   "scripts": {
     "postinstall": "wombat build",
-    "dev": "wombat dev"
+    "dev": "wombat dev",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
-    "@snowdog/wombat": "^1.0.0-alpha.11"
-  }
+    "@snowdog/wombat": "^1.0.0-alpha.11",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
